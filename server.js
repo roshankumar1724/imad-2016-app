@@ -95,7 +95,7 @@ var createTemplate = function (articleObj) {
 app.get('/:articleName', function (req, res) {
     // ':articleName' will be evaluated as the path directory by express
     // Extract the name of the file from the URL :- provided by express
-    var page = req.param.articleName;
+    var page = req.params.articleName;
     
     res.send(createTemplate(articles[page]));
     // 'articles[articleName]' will contain the attributes of articleObject
