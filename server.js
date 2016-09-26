@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var atricles = {
+var articles = {
     'articleOne': {
         title: "Article One | Roshan Kumar",
         heading: "Introduction to Object-Oriented JavaScript",
