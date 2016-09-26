@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 var atricles = {
-    articleOne: {
+    'articleOne': {
         title: "Article One | Roshan Kumar",
         heading: "Introduction to Object-Oriented JavaScript",
         date: "Sep 23, 2016",
@@ -23,7 +23,7 @@ var atricles = {
             </p>
         `
     },
-    articleTwo: {
+    'articleTwo': {
         title: "Article Two | Roshan Kumar",
         heading: "Working with objects",
         date: "Sep 24, 2016",
@@ -39,7 +39,7 @@ var atricles = {
             </p>
         `
     },
-    articleThree: {
+    'articleThree': {
         title: "Article Three | Roshan Kumar",
         heading: "Indexed collections in Java Script",
         date: "Sep 25, 2016",
