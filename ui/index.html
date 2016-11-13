@@ -1,19 +1,298 @@
 <!doctype html>
 <html>
     <head>
-        <link href="/ui/style.css" rel="stylesheet" />
+        <link href="/static/css/style.css" rel="stylesheet"/>
+        <link href="/static/css/bootstrap.css" rel="stylesheet"/>
+
+        <script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+        <title>
+            Cricket ScoreBoard
+        </title>
     </head>
     <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
+        <div class="content-body">
+            <!-- <div class="navbar-wrapper">
+            <div class="container"> -->
+
+            <!-- NAVBAR ================================================== -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">
+                            <img src="/static/images/cricket-logo.svg" alt="cricket-logo" class="img-responsive"/>
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <!-- <ul class="nav nav-pills"> -->
+                        <li class="active">
+                            <a href="/">
+                                HOME
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/ui/viewDetail">
+                                VIEW
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/facts">
+                                FACTS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/add">
+                                ADD DATA
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about">
+                                ABOUT US
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact">
+                                CONTACT
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right" style="padding-right: 30px;">
+                        <li data-toggle="modal" data-target="#mySignupModal">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-user"></span>
+                                SIGN UP
+                            </a>
+                        </li>
+                        <li data-toggle="modal" data-target="#myLoginModal">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                LOGIN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- </div>
+            </div> -->
+            <br/><br/><br/><br/>
+
+            <!-- NAVBAR ================================================== -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="/static/images/cricketBackground.jpg" alt="CricketGround">
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/static/images/worldcup-trophy.jpg" alt="Trophy">
+                    </div>
+
+                    <div class="item">
+                        <img src="/static/images/cricket_ball.jpg" alt="cricketBall">
+                    </div>
+
+                    <div class="item">
+                        <img src="/static/images/ICC-world-cup-logo.jpeg" alt="2011 world cup logo">
+                    </div>
+
+                    <div class="item">
+                      <img src="/static/images/ICC-Cricket-World-Cup-2015-Logo.jpg" alt="2015 world cup logo">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!--==============================================================================================================================================================================================================  -->
+
+            <!-- /START OF THE FEATURETTES -->
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">VIEW BRIEF DETAILS</h2>
+                    <p class="lead">
+                        <a href="#">
+                            Player Details
+                        </a>:-
+                        <br/>
+                        This will show the brief details of the players regarding their date of birth, height, weight, matches played, runs scored and wickets taken and so on ...
+                        <br/><br/>
+                        <a href="#">
+                            Country Details
+                        </a>:-
+                        <br/>
+                        This will give the summary of the players playing in a particular country.
+                        <br/>
+                        Along with their flags, and players jersey.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <a href="/ui/viewDetail">
+                        <img class="featurette-image img-responsive center-block" src="/static/images/shot1.jpg" alt="Generic placeholder image">
+                    </a>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 col-md-push-5">
+                    <h2 class="featurette-heading">
+                        Some Awesome Facts about the previous worldcups ...
+                        <span class="text-muted">See for yourself.</span>
+                    </h2>
+                    <p class="lead">
+                        Query our database to view some specific details from previous few Cricket Worldcups
+                    </p>
+                </div>
+                <div class="col-md-5 col-md-pull-7">
+                    <a href="/facts">
+                        <img class="featurette-image img-responsive center-block" src="/static/images/shot1.jpg" alt="Generic placeholder image">
+                    </a>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">And lastly, If U wanna add few details more ...
+                        <span class="text-muted">Login for adding details.</span>
+                    </h2>
+                    <p class="lead">
+                        If u want to add more details regarding the worldcup which will be beneficial for the society
+                        <br/>Please<em>LOGIN</em>and add more ... ...
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <a href="/add">
+                        <img class="featurette-image img-responsive center-block" src="/static/images/shot1.jpg" alt="Generic placeholder image">
+                    </a>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <!-- /END THE FEATURETTES -->
+
+            <!-- DEFINING SIGNUP MODAL ============== -->
+
+            <div class="modal fade" id="mySignupModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title text-center">
+                                <span class="glyphicon glyphicon-user"></span>Create your Account</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form role="form" action="/" method="post" name="signupform">
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">User Name :</label>
+                                        <div class="col-md-7">
+                                            <input type="text" name="name" placeholder="Enter Full Name" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Email Id :</label>
+                                        <div class="col-md-7">
+                                            <input type="email" name="email" placeholder="Email" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Password :</label>
+                                        <div class="col-md-7">
+                                            <input type="password" name="password" placeholder="Password" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Confirm Password :</label>
+                                        <div class="col-md-7">
+                                            <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <button type="submit" name="signup" value="Sign Up" class="btn btn-block btn-primary">
+                                        <span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;&nbsp;Register
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEFINING LOGIN Modal -->
+            <div class="modal fade" id="myLoginModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title text-center">
+                                <span class="glyphicon glyphicon-lock"></span>LOGIN</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form role="form" method="post" action="/" name="loginForm">
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Username</label>
+                                        <div class="col-md-7">
+                                            <input type="text" name="name" placeholder="Enter registered userNane" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Password</label>
+                                        <div class="col-md-7">
+                                            <input type="password" name="name" placeholder="Enter password" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="" checked>Remember me</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">
+                                        <span class="glyphicon glyphicon-off"></span>Login</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p class="pull-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>&copy; 2016 Company, Inc. &middot;
+                    <a href="#">Privacy</a>
+                    &middot;
+                    <a href="#">Terms</a>
+                </p>
+            </footer>
         </div>
-        <br>
-        <div class="center text-big bold">
-            <p>
-                Hey all !!!, This is Roshan Kumar.
-            </p>
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
+
+        <script type="text/javascript" src="ui/main.js"></script>
     </body>
 </html>
