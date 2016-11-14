@@ -3,117 +3,122 @@
                   other files by user (ui/index.html) on demand.
 */
 
-module.exports = {
-        country1: {
-            flagLocation: "/static/images/flags/au.svg",
-            webReference: "https://en.wikipedia.org/wiki/Australia",
-            countryName: 'Australia',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-        country2: {
-            flagLocation: "/static/images/flags/bd.svg",
-            webReference: "",
-            countryName: 'Bangladesh',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-        'country3': {
-            flagLocation: "/static/images/flags/gb-eng.svg",
-            webReference: "",
-            countryName: 'England',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-        'country4': {
-            flagLocation: "/static/images/flags/in.svg",
-            webReference: "",
-            countryName: 'India',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-        'country5': {
-            flagLocation: "/static/images/flags/lk.svg",
-            webReference: "",
-            countryName: 'Sri Lanka',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-        'country6': {
-            flagLocation: "/static/images/flags/pk.svg",
-            webReference: "",
-            countryName: 'Pakistan',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-        'country7': {
-            flagLocation: "/static/images/flags/WI.svg",
-            webReference: "",
-            countryName: 'West Indies',
-            shortName: 'au',
-            countryCapital: 'Canberra',
-            countryLanguage: 'English',
-            countryArea: '7,692,024 km2'
-        },
-    createViewArticle: function(countryObj) {
-        var flagLocation = countryObj.flagLocation;
-        var countryName = countryObj.countryName;
-        var shortName = countryObj.shortName;
-        var countryCapital = countryObj.countryCapital;
-        var countryLanguage = countryObj.countryLanguage;
-        var countryArea = countryObj.countryArea;
-        var webReference = countryObj.webReference;
+var countries = {
+  'country1': {
+      flagLocation: "/static/images/flags/au.svg",
+      webReference: "https://en.wikipedia.org/wiki/Australia",
+      countryName: 'Australia',
+      shortName: 'au',
+      countryCapital: 'Canberra',
+      countryLanguage: 'English',
+      countryArea: '7,692,024 km2'
+  },
+  'country2': {
+      flagLocation: "/static/images/flags/bd.svg",
+      webReference: "https://en.wikipedia.org/wiki/Bangladesh",
+      countryName: 'Bangladesh',
+      shortName: 'BD',
+      countryCapital: 'Dhaka',
+      countryLanguage: 'Bengali',
+      countryArea: '147,570 km2'
+  },
+  'country3': {
+      flagLocation: "/static/images/flags/gb-eng.svg",
+      webReference: "https://en.wikipedia.org/wiki/England",
+      countryName: 'England',
+      shortName: 'ENG',
+      countryCapital: 'London',
+      countryLanguage: 'English',
+      countryArea: '130,279 km2'
+  },
+  'country4': {
+      flagLocation: "/static/images/flags/in.svg",
+      webReference: "https://en.wikipedia.org/wiki/India",
+      countryName: 'India',
+      shortName: 'IN',
+      countryCapital: 'New Delhi',
+      countryLanguage: 'Hindi',
+      countryArea: '3,287,263 km2'
+  },
+  'country5': {
+      flagLocation: "/static/images/flags/lk.svg",
+      webReference: "https://en.wikipedia.org/wiki/Sri_Lanka",
+      countryName: 'Sri Lanka',
+      shortName: 'LK',
+      countryCapital: 'Colombo',
+      countryLanguage: 'English',
+      countryArea: '65,610 km2'
+  },
+  'country6': {
+      flagLocation: "/static/images/flags/pk.svg",
+      webReference: "https://en.wikipedia.org/wiki/Pakistan",
+      countryName: 'Pakistan',
+      shortName: 'PK',
+      countryCapital: 'Islamabad',
+      countryLanguage: 'Urdu',
+      countryArea: '881,913 km2'
+  },
+  'country7': {
+      flagLocation: "/static/images/flags/WI.svg",
+      webReference: "https://en.wikipedia.org/wiki/West_Indies",
+      countryName: 'Caribbean Islands (aka. West Indies)',
+      shortName: 'WI',
+      countryCapital: '&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;',
+      countryLanguage: 'English',
+      countryArea: '&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;'
+  },
+};
 
-        var articleTemplate = `
-      <figure class="col-lg-12">
-          <a href=""><img class="img img-responsive article-img" src="${flagLocation}"></a>
-          <figcaption class="article-caption">
-              <h1 class="article-title">
-                  <a href="${webReference}">Australia</a>
-              </h1>
-          </figcaption>
-      </figure>
-      <div class="article-intro col-lg-12" style="padding-top: 10px;">
-          <table class="table">
-              <tbody>
-                  <tr>
-                      <th scope="row">Name</th>
-                      <td>${countryName}</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">ISO_code</th>
-                      <td>${shortName}</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">Capital</th>
-                      <td>${countryCapital}</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">National Languaue</th>
-                      <td>${countryLanguage}</td>
-                  </tr>
-                  <tr>
-                      <th scope="row">area</th>
-                      <td>${countryArea}</td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-      `;
-        return articleTemplate;
-    },
+
+var createViewArticle = function(countryObj) {
+    var flagLocation = countryObj.flagLocation;
+    var countryName = countryObj.countryName;
+    var shortName = countryObj.shortName;
+    var countryCapital = countryObj.countryCapital;
+    var countryLanguage = countryObj.countryLanguage;
+    var countryArea = countryObj.countryArea;
+    var webReference = countryObj.webReference;
+
+    var articleTemplate = `
+  <figure class="col-lg-12">
+      <a href=""><img class="img img-responsive article-img" src="${flagLocation}"></a>
+      <figcaption class="article-caption">
+          <h1 class="article-title">
+              <a href="${webReference}">${countryName}</a>
+          </h1>
+      </figcaption>
+  </figure>
+  <div class="article-intro col-lg-12" style="padding-top: 10px;">
+      <table class="table">
+          <tbody>
+              <tr>
+                  <th scope="row">Name</th>
+                  <td>${countryName}</td>
+              </tr>
+              <tr>
+                  <th scope="row">ISO_code</th>
+                  <td>${shortName}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Capital</th>
+                  <td>${countryCapital}</td>
+              </tr>
+              <tr>
+                  <th scope="row">National Languaue</th>
+                  <td>${countryLanguage}</td>
+              </tr>
+              <tr>
+                  <th scope="row">area</th>
+                  <td>${countryArea}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  `;
+    return articleTemplate;
+};
+
+module.exports = {
     articles: {
         'viewDetail': {
             title: "View Info",
@@ -130,246 +135,41 @@ module.exports = {
                 <div class="row">
                     <div class="row">
                         <article class="col-md-6">
-                          ${createViewArticle(this.country1)}
+                          ${createViewArticle(countries['country1'])}
                         </article>
 
                         <article class="col-md-6">
-                            <figure class="col-lg-12">
-                                <a href=""><img class="img img-responsive article-img" src="/static/images/flags/bd.svg"></a>
-                                <figcaption class="article-caption">
-                                    <h1 class="article-title">
-                                        <a href="https://en.wikipedia.org/wiki/Bangladesh">Bangladesh</a>
-                                    </h1>
-                                </figcaption>
-                            </figure>
-
-                            <div class="article-intro col-lg-12" style="padding-top: 10px;">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Name</th>
-                                            <td>countryName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ISO_code</th>
-                                            <td>shortName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Capital</th>
-                                            <td>countryCapital</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">National Languaue</th>
-                                            <td>language</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">area</th>
-                                            <td>countryArea</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            ${createViewArticle(countries['country2'])}
                         </article>
                     </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <article class="col-md-6">
-                            <figure class="col-lg-12">
-                                <a href=""><img class="img img-responsive article-img" src="/static/images/flags/gb-eng.svg"></a>
-                                <figcaption class="article-caption">
-                                    <h1 class="article-title">
-                                        <a href="https://en.wikipedia.org/wiki/England">England</a>
-                                    </h1>
-                                </figcaption>
-                            </figure>
-                            <div class="article-intro col-lg-12" style="padding-top: 10px;">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Name</th>
-                                            <td>countryName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ISO_code</th>
-                                            <td>shortName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Capital</th>
-                                            <td>countryCapital</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">National Languaue</th>
-                                            <td>language</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">area</th>
-                                            <td>countryArea</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </article>
-
-                        <article class="col-md-6">
-                            <figure class="col-lg-12">
-                                <a href=""><img class="img img-responsive article-img" src="/static/images/flags/in.svg"></a>
-                                <figcaption class="article-caption">
-                                    <h1 class="article-title">
-                                        <a href="https://en.wikipedia.org/wiki/India">India</a>
-                                    </h1>
-                                </figcaption>
-                            </figure>
-
-                            <div class="article-intro col-lg-12" style="padding-top: 10px;">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Name</th>
-                                            <td>countryName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ISO_code</th>
-                                            <td>shortName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Capital</th>
-                                            <td>countryCapital</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">National Languaue</th>
-                                            <td>language</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">area</th>
-                                            <td>countryArea</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </article>
-                    </div>
-
                     <hr>
                     <div class="row">
                         <article class="col-md-6">
-                            <figure class="col-lg-12">
-                                <a href=""><img class="img img-responsive article-img" src="/static/images/flags/lk.svg"></a>
-                                <figcaption class="article-caption">
-                                    <h1 class="article-title">
-                                        <a href="https://en.wikipedia.org/wiki/Sri_Lanka">Sri Lanka</a>
-                                    </h1>
-                                </figcaption>
-                            </figure>
-                            <div class="article-intro col-lg-12" style="padding-top: 10px;">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Name</th>
-                                            <td>countryName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ISO_code</th>
-                                            <td>shortName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Capital</th>
-                                            <td>countryCapital</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">National Languaue</th>
-                                            <td>language</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">area</th>
-                                            <td>countryArea</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            ${createViewArticle(countries['country3'])}
                         </article>
 
                         <article class="col-md-6">
-                            <figure class="col-lg-12">
-                                <a href=""><img class="img img-responsive article-img" src="/static/images/flags/pk.svg"></a>
-                                <figcaption class="article-caption">
-                                    <h1 class="article-title">
-                                        <a href="https://en.wikipedia.org/wiki/Pakistan">Pakistan</a>
-                                    </h1>
-                                </figcaption>
-                            </figure>
-                            <div class="article-intro col-lg-12" style="padding-top: 10px;">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Name</th>
-                                            <td>countryName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ISO_code</th>
-                                            <td>shortName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Capital</th>
-                                            <td>countryCapital</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">National Languaue</th>
-                                            <td>language</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">area</th>
-                                            <td>countryArea</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            ${createViewArticle(countries['country4'])}
                         </article>
                     </div>
                     <hr>
-
                     <div class="row">
                         <article class="col-md-6">
-                            <figure class="col-lg-12">
-                                <a href=""><img class="img img-responsive article-img" src="/static/images/flags/WI.svg"></a>
-                                <figcaption class="article-caption">
-                                    <h1 class="article-title">
-                                        <a href="https://en.wikipedia.org/wiki/West_Indies">West Indies</a>
-                                    </h1>
-                                </figcaption>
-                            </figure>
-                            <div class="article-intro col-lg-12" style="padding-top: 10px;">
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Name</th>
-                                            <td>countryName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ISO_code</th>
-                                            <td>shortName</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Capital</th>
-                                            <td>countryCapital</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">National Languaue</th>
-                                            <td>language</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">area</th>
-                                            <td>countryArea</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            ${createViewArticle(countries['country5'])}
+                        </article>
+
+                        <article class="col-md-6">
+                            ${createViewArticle(countries['country6'])}
+                        </article>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <article class="col-md-6">
+                            ${createViewArticle(countries['country7'])}
                         </article>
 
                     </div>
                     <hr>
-
                 </div>
             </div>
             `
@@ -408,11 +208,10 @@ module.exports = {
           `
         }
     },
+
     createTemplate: function(articleObj) {
         var title = articleObj.title;
         var navbarList = articleObj.navbarList;
-        // var heading = articleObj.heading;
-        // var date = articleObj.date;
         var content = articleObj.content;
 
         var htmlTemplate = `
@@ -441,13 +240,13 @@ module.exports = {
                             ${navbarList}
                         </ul>
                         <ul class="nav navbar-nav navbar-right" style="padding-right: 30px;">
-                            <li>
+                            <li data-toggle="modal" data-target="#mySignupModal">
                                 <a href="#">
                                     <span class="glyphicon glyphicon-user"></span>
                                     SIGN UP
                                 </a>
                             </li>
-                            <li>
+                            <li data-toggle="modal" data-target="#myLoginModal">
                                 <a href="#">
                                     <span class="glyphicon glyphicon-log-in"></span>
                                     LOGIN
@@ -456,12 +255,101 @@ module.exports = {
                         </ul>
                     </div>
                 </nav>
+                <br/><br/><br/><br/>
         <!-- ===============================================================================================================
                             END  NAVBAR
         ===============================================================================================================                 -->
 
             <div>
                 ${content}
+            </div>
+            <!-- DEFINING SIGNUP MODAL ============== -->
+
+            <div class="modal fade" id="mySignupModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title text-center">
+                                <span class="glyphicon glyphicon-user"></span>Create your Account</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form role="form" action="/" method="post" name="signupform">
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">User Name :</label>
+                                        <div class="col-md-7">
+                                            <input type="text" name="name" placeholder="Enter Full Name" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Email Id :</label>
+                                        <div class="col-md-7">
+                                            <input type="email" name="email" placeholder="Email" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Password :</label>
+                                        <div class="col-md-7">
+                                            <input type="password" name="password" placeholder="Password" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Confirm Password :</label>
+                                        <div class="col-md-7">
+                                            <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <button type="submit" name="signup" value="Sign Up" class="btn btn-block btn-primary">
+                                        <span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;&nbsp;Register
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEFINING LOGIN Modal -->
+            <div class="modal fade" id="myLoginModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title text-center">
+                                <span class="glyphicon glyphicon-lock"></span>LOGIN</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form role="form" method="post" action="/" name="loginForm">
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Username</label>
+                                        <div class="col-md-7">
+                                            <input type="text" name="name" placeholder="Enter registered userNane" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label class="col-md-5 control-label">Password</label>
+                                        <div class="col-md-7">
+                                            <input type="password" name="name" placeholder="Enter password" class="form-control"/>
+                                        </div>
+                                    </div><br>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="" checked>Remember me</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">
+                                        <span class="glyphicon glyphicon-off"></span>Login</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </body>
         </html>
