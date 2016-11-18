@@ -219,7 +219,7 @@ module.exports = {
         <head>
             <title> ${title} </title>
             <meta name='viewport' content="width=device-width, initial-scale=1">
-            <link href="/static/css/style.css" rel="stylesheet"/>
+            <link href="/ui/style.css" rel="stylesheet"/>
             <link href="/static/css/bootstrap.css" rel="stylesheet"/>
 
             <script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
