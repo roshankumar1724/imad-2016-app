@@ -123,3 +123,9 @@ article {
 .modal-body {
     margin: 20px;
 }
+
+.modal-body>.row>.modal-form>button {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
