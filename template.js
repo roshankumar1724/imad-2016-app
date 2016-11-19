@@ -218,7 +218,7 @@ module.exports = {
         <html>
         <head>
             <title> ${title} </title>
-            <meta name='viewport' content="width=device-width, initial-scale=1">
+            <!--<meta name='viewport' content="width=device-width, initial-scale=1">-->
             <link href="/ui/style.css" rel="stylesheet"/>
             <link href="/static/css/bootstrap.css" rel="stylesheet"/>
 
